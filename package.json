@@ -2,9 +2,12 @@
   "name": "climate-disasters",
   "version": "1.0.0",
   "description": "Checkr's challenge",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon server/server.js",
+    "client": "webpack-dev-server --mode development --open --hot",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -17,9 +20,18 @@
   },
   "homepage": "https://github.com/tabithahsia/climate-disasters#readme",
   "dependencies": {
+    "concurrently": "^3.5.1",
     "express": "^4.16.3",
+    "nodemon": "^1.17.3",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "request": "^2.85.0"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15",
+    "webpack-dev-server": "^3.1.3"
   }
 }
