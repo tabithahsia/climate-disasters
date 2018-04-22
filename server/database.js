@@ -10,6 +10,7 @@ request.get("https://www.fema.gov/api/open/v1/DisasterDeclarationsSummaries.csv"
       csv[i] = csv[i].split(",");
       data.push({state: csv[i][5], year: Number(csv[i][7]), disaster: csv[i][9]});
     }
+    // console.log(data); //checks if data looks the way i want
   }
 })
 
