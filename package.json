@@ -1,0 +1,22 @@
+{
+  "name": "climate-disasters",
+  "version": "1.0.0",
+  "description": "Checkr's challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tabithahsia/climate-disasters.git"
+  },
+  "author": "Tabitha Hsia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tabithahsia/climate-disasters/issues"
+  },
+  "homepage": "https://github.com/tabithahsia/climate-disasters#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
