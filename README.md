@@ -10,6 +10,9 @@ Look up where various disasters happened in the US since 1953
 ## Example
 ![Screenshot Example](https://i.imgur.com/cDazSL2.png)
 
+## Wireframe
+> [Wireframe](https://docs.google.com/drawings/d/18NkfvpNdpSG4ZwsEP29AxoSlX25SqrtoHfOBJ0Hl_VU/edit?usp=sharing)
+
 ## Getting Started
 
 ### Requirements
