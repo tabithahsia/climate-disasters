@@ -7,11 +7,6 @@ var PORT = process.env.PORT || 8080;
 
 app.use(express.static(path.join(__dirname, '..', 'dist/')));
 
-app.get('/', function(req, res){
-  // data = db.data;
-})
-
-
 app.get('/getLocations/:disaster/:year', function(req, res){
   console.log('req', req.params);
   let locations = [];
