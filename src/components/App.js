@@ -84,7 +84,6 @@ class App extends React.Component {
               <option value="Other">Other</option>
             </select>
           </label>
-
           <input type="submit" value="Filter" />
         </form>
 
