@@ -3,7 +3,7 @@ const db = require('./database.js');
 const path = require('path');
 
 var app = express();
-var port = 8080;
+var PORT = process.env.PORT || 8080;
 
 app.use(express.static(path.join(__dirname, '..', 'dist/')));
 
@@ -27,6 +27,6 @@ app.get('/getLocations/:disaster/:year', function(req, res){
   res.send(locations);
 })
 
-app.listen(port, function(){
-  console.log('Listening on port 8080');
+app.listen(PORT, function(){
+  console.log('Listening on port: ', PORT);
 })

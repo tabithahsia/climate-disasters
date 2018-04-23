@@ -34,11 +34,11 @@ class Map extends Component {
       this.map = new maps.Map(node, mapConfig);
       console.log(this.state.locations);
       if(this.state.locations.length > 0){
-      this.state.locations.forEach( location => { // iterate through locations saved in state
-        const marker = new google.maps.Marker({ // creates a new Google maps Marker object.
-          position: {lat: location[0], lng: location[1]}, // sets position of marker to specified location
-          map: this.map // sets markers to appear on the map
-        });
+        this.state.locations.forEach( location => { // iterate through locations saved in state
+          const marker = new google.maps.Marker({ // creates a new Google maps Marker object.
+            position: {lat: location[0], lng: location[1]}, // sets position of marker to specified location
+            map: this.map // sets markers to appear on the map
+          });
       })
       }
     }
