@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 // import Map from './Map.js';
 
 class App extends React.Component {
@@ -44,8 +44,6 @@ class App extends React.Component {
     return (
       <div>
         <h1>Climate Disasters</h1>
-        {/*// <button onClick={this.testButton}> Testing button </button>*/}
-
         <form onSubmit={this.formSubmit}>
           <label>
             Enter a year from 1953 - 2018:
