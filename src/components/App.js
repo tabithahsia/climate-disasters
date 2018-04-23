@@ -1,5 +1,5 @@
 import React from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import { GoogleApiWrapper } from 'google-maps-react';
 import Map from './Map';
 
@@ -10,7 +10,8 @@ class App extends React.Component {
     this.state = {
       year: '',
       disaster: 'Chemical',
-      validDate: true
+      validDate: true,
+      locations: []
     }
     this.selectDisaster = this.selectDisaster.bind(this);
     this.selectDate = this.selectDate.bind(this);
@@ -20,25 +21,31 @@ class App extends React.Component {
   selectDisaster(event){
     event.preventDefault();
     this.setState({disaster: event.target.value})
-    console.log(this.state.disaster);
   }
 
   selectDate(event){
     this.setState({year: event.target.value})
-    console.log(this.state.year);
     // console.log(this.state.year.length + 1);
   }
   formSubmit(event){
     event.preventDefault();
     console.log(this.state);
-    if(this.state.year.length + 1 === 4){
-      if(Number(this.state.year) < 1953 || Number(this.state.year) > 2018){
-        this.setState({validDate: false });
-      } else {
-        this.setState({validDate: true });
-        console.log(this.state);
-      }
-    }
+    axios.get('/getLocations')
+    .then(response => {
+      console.log('this is the response', response);
+    })
+    .catch(function(error) {
+      console.log('Error: ', error);
+    })
+  }
+    // if(this.state.year.length + 1 === 4){
+    //   if(Number(this.state.year) < 1953 || Number(this.state.year) > 2018){
+    //     this.setState({validDate: false });
+    //   } else {
+    //     this.setState({validDate: true });
+    //     console.log(this.state);
+    //   }
+    // }
   }
   render()
    {
