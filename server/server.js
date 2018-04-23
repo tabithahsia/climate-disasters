@@ -5,7 +5,7 @@ const path = require('path');
 var app = express();
 var PORT = process.env.PORT || 8080;
 
-app.use(express.static(path.join(__dirname, '..', 'client/')));
+app.use(express.static(path.join(__dirname, '..', 'dist/')));
 
 app.get('/', function(request, response) {
   response.send('Hello World!');
