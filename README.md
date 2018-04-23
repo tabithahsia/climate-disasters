@@ -28,7 +28,7 @@ npm install
 
 ## Built With
 - [Node](https://nodejs.org/en/)
-- [Express] (https://expressjs.com/)
+- [Express](https://expressjs.com/)
 - [ReactJS](https://reactjs.org/)
 - [Axios](https://github.com/axios/axios)
 - [Google Maps](https://www.google.com/maps)
