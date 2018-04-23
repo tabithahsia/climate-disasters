@@ -3,6 +3,10 @@
 Look up where various disasters happened in the US since 1953
 🌪❄️🔥🌋🌊
 
+## Usage
+> Go to https://climatedisaster.herokuapp.com/
+
+
 ## Example
 ![Screenshot Example](https://i.imgur.com/cDazSL2.png)
 
@@ -31,4 +35,6 @@ npm install
 - [Express](https://expressjs.com/)
 - [ReactJS](https://reactjs.org/)
 - [Axios](https://github.com/axios/axios)
+
+## External Services
 - [Google Maps](https://www.google.com/maps)
