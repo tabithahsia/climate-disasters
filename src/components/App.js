@@ -3,6 +3,9 @@ import axios from 'axios';
 import { GoogleApiWrapper } from 'google-maps-react';
 import Map from './Map';
 
+const GOOGLE_MAPS_KEY = process.env.GOOGLE_MAPS_KEY;
+console.log(GOOGLE_MAPS_KEY);
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -95,5 +98,5 @@ class App extends React.Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyD_Tndmyxw49H2SwNoLcAjBDpCg5ioFarQ'
+  apiKey: GOOGLE_MAPS_KEY
 })(App)
