@@ -16,7 +16,7 @@ app.get('/getLocations/:disaster/:year', function(req, res){
   console.log('req', req.params);
   let locations = [];
   let data = db.data;
-  // console.log('this is the data finally loaded! ', Array.isArray(data));
+  console.log('this is the data finally loaded! ', data);
   for(var i = 0; i < data.length; i++){
     if((data[i].year === Number(req.params.year)) && (data[i].disaster === req.params.disaster)){
       locations.push([data[i].latitude, data[i].longitude]);

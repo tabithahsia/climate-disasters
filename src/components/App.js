@@ -8,7 +8,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      year: '',
+      year: 1953,
       disaster: 'Chemical',
       validDate: true,
       locations: []
@@ -20,7 +20,9 @@ class App extends React.Component {
 
   selectDisaster(event){
     event.preventDefault();
-    this.setState({disaster: event.target.value})
+    this.setState({
+      disaster: event.target.value
+    })
   }
 
   selectDate(event){
@@ -29,10 +31,12 @@ class App extends React.Component {
   }
   formSubmit(event){
     event.preventDefault();
-    console.log(this.state);
-    axios.get('/getLocations')
+    axios.get(`/getLocations/${this.state.disaster}/${this.state.year}`)
     .then(response => {
-      console.log('this is the response', response);
+      console.log('this is the response: ', response.data);
+      this.setState({
+        locations: response.data
+      });
     })
     .catch(function(error) {
       console.log('Error: ', error);
@@ -46,7 +50,6 @@ class App extends React.Component {
     //     console.log(this.state);
     //   }
     // }
-  }
   render()
    {
     return (
@@ -55,7 +58,7 @@ class App extends React.Component {
         <form onSubmit={this.formSubmit}>
           <label>
             Enter a year from 1953 - 2018:
-            <input type="text" value={this.state.year} onChange={this.selectDate} />
+            <input type="number" value={this.state.year} onChange={this.selectDate} />
           </label>
           <label>
             Disaster type:
@@ -86,7 +89,7 @@ class App extends React.Component {
         </form>
 
         {this.state.validDate ? null : <p> Please enter a valid date </p>}
-        <Map google={this.props.google} />
+        <Map google={this.props.google} locations={this.state.locations}/>
       </div>
     );
   }
