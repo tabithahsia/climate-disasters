@@ -1,5 +1,9 @@
 const request = require('request');
+const statesLatLong = require('./statesLatLong');
+// console.log(statesLatLong);
 var data = [];
+
+
 
 
 request.get("https://www.fema.gov/api/open/v1/DisasterDeclarationsSummaries.csv", function(error, response, body){
