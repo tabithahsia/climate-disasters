@@ -30,6 +30,7 @@
     "axios": "^0.18.0",
     "babel-plugin-react-transform": "^3.0.0",
     "concurrently": "^3.5.1",
+    "csv-parse": "^2.2.0",
     "express": "^4.16.3",
     "google-maps": "^3.3.0",
     "google-maps-react": "^2.0.0",
