@@ -1,6 +1,7 @@
 import React from 'react';
 // import axios from 'axios';
-// import Map from './Map.js';
+import { GoogleApiWrapper } from 'google-maps-react';
+import Map from './Map';
 
 class App extends React.Component {
   constructor(props) {
@@ -78,12 +79,12 @@ class App extends React.Component {
         </form>
 
         {this.state.validDate ? null : <p> Please enter a valid date </p>}
-
-
-
+        <Map google={this.props.google} />
       </div>
     );
   }
 }
 
-export default App;
+export default GoogleApiWrapper({
+  apiKey: 'AIzaSyD_Tndmyxw49H2SwNoLcAjBDpCg5ioFarQ'
+})(App)
