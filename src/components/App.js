@@ -4,7 +4,6 @@ import { GoogleApiWrapper } from 'google-maps-react';
 import Map from './Map';
 
 const GOOGLE_MAPS_KEY = process.env.GOOGLE_MAPS_KEY;
-console.log(GOOGLE_MAPS_KEY);
 
 class App extends React.Component {
   constructor(props) {

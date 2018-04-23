@@ -16,7 +16,7 @@ class Map extends Component {
   }
   componentWillReceiveProps(nextProps) {
     this.setState({locations: nextProps.locations});
-}
+  }
 
   loadMap() {
     if(this.props && this.props.google) {
@@ -32,7 +32,6 @@ class Map extends Component {
       })
 
       this.map = new maps.Map(node, mapConfig);
-      console.log(this.state.locations);
       if(this.state.locations.length > 0){
         this.state.locations.forEach( location => { // iterate through locations saved in state
           const marker = new google.maps.Marker({ // creates a new Google maps Marker object.
