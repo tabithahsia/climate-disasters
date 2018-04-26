@@ -4,7 +4,7 @@ Look up where various disasters happened in the US since 1953
 🌪❄️🔥🌋🌊
 
 ## Usage
-> Go to https://climatedisaster.herokuapp.com/
+> Go to https://climatedisasters.herokuapp.com/
 
 
 ## Example
